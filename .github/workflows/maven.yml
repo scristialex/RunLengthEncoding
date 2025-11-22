@@ -33,6 +33,6 @@ jobs:
     - name: Upload Artifact
       uses: actions/upload-artifact@v4
       with:
-        name: RunLengthEncoding
+        name: RunLengthEncoding-1.0-SNAPSHOT
         # Customize the path to your packaged application (e.g., target/*.jar)
         path: target/*.jar
