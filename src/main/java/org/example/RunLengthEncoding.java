@@ -29,14 +29,12 @@ public class RunLengthEncoding {
     }
 
     public static void main(String[] args) {
-        if (args.length > 0) {
-            int i = 0;
-            while (i < args.length) {
-                System.out.println(encode(args[i].toCharArray()));
-                i++;
-            }
-        } else {
+        if (args.length == 1) {
+            System.out.println(encode(args[0].toCharArray()));
+        } else if (args.length == 0){
             System.out.println("Please provide an argument");
+        } else if (args.length > 1){
+            System.out.println("Please provide only one argument");
         }
 
     }
