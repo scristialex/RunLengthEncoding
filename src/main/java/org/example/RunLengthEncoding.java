@@ -10,19 +10,21 @@ public class RunLengthEncoding {
             return "";
         }
 
-        Map<Character, Integer> occurrence = new HashMap<>();
-        for (Character current : input) {
-            occurrence.put(current, occurrence.getOrDefault(current, 0) + 1);
-        }
-
-        Set<Character> processedCharacters = new HashSet<>();
+        int inputLength = input.length;
         StringBuilder result = new StringBuilder();
-        for (int i = 0; i < input.length; i++) {
-            if (!processedCharacters.contains(input[i])) {
-                processedCharacters.add(input[i]);
-                result.append(input[i]);
-                result.append(occurrence.get(input[i]));
+        int i = 0;
+        int j = 0;
+        for (i = 0; i < inputLength; i = j) {
+            int count = 1;
+            for (j = i + 1; j < inputLength; j++) {
+                if (input[i] == input[j]) {
+                   count++;
+                } else {
+                    break;
+                }
             }
+            result.append(input[i]);
+            result.append(count);
         }
 
         return result.toString();
@@ -36,6 +38,5 @@ public class RunLengthEncoding {
         } else {
             System.out.println("Please provide only one argument");
         }
-
     }
 }

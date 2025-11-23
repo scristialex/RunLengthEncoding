@@ -74,7 +74,7 @@ public class RunLengthEncodingTest {
     @Test
     void testUnicodeCharacters() {
         char[] input = "¼¾¼¼¼¼ÈÈÈ".toCharArray();
-        assertEquals("¼5¾1È3", RunLengthEncoding.encode(input));
+        assertEquals("¼1¾1¼4È3", RunLengthEncoding.encode(input));
     }
 
     StringBuffer createStringBuffer (StringBuffer sb, Character c, Integer count) {
@@ -96,7 +96,7 @@ public class RunLengthEncodingTest {
         sb = createStringBuffer(sb, 'b', 10);
 
         char[] input = sb.toString().toCharArray();
-        assertEquals("b30010A2222[44444(55555", RunLengthEncoding.encode(input));
+        assertEquals("b30000A2222[44444(55555b10", RunLengthEncoding.encode(input));
     }
 
     @Test
@@ -104,8 +104,5 @@ public class RunLengthEncodingTest {
         char[] input = "wwwwaaadexxxxxx".toCharArray();
         assertEquals("w4a3d1e1x6", RunLengthEncoding.encode(input));
     }
-
-
-
 
 }
