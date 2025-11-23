@@ -118,3 +118,27 @@ The file can be accessed:
    cat .github/workflows/maven.yml
    ```
 The created jar file can be downloaded from the *Actions* tab in the GitHub repository after a successful build. 
+
+## Warning
+If the input string contains specials characters and is not enclosed in double quotes or the special characters are not escapated, the special characters can break the shell execution.
+
+Shells- e.g Bash, Zsh- process the command line first before sending the argument to the Java program. 
+
+If a special character, for example '&' or
+'*', is not quoted or escaped, the shell crashes the command execution.
+
+For example, if we run:
+
+   ```java -jar target/RunLengthEncoding-1.0-SNAPSHOT.jar wwww#&AAA123da*```
+
+we'll obtain:
+    ![img_4.png](img_4.png)
+
+The shell:
+- truncates the input string at '&'
+- passes "wwww#" as argument to the Java program 
+- executes the command in background
+- outputs "no matches found: AAA123da*"
+- program returns "w4#1"
+
+Therefore if the input string contains special characters, they must by escapaed or the entire string must be enclosed in double quotes.
