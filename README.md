@@ -29,7 +29,7 @@ Complete the function **encode()** which takes a character array as a input para
 
 # Solution
 
-**Prerequisites**
+## Prerequisites
 - For running the solution:
   - Java: 24
   - Maven: 3.9.11
@@ -39,7 +39,7 @@ Complete the function **encode()** which takes a character array as a input para
     - Maven: 3.9.11
     - Access to GitHub or Git for cloning the repository
 
-**Running the solution**
+## Running the solution
 1. Download the jar package
 
     - Go to the [RunLengthEncoding](https://github.com/scristialex/RunLengthEncoding) repository
@@ -51,36 +51,63 @@ Complete the function **encode()** which takes a character array as a input para
 2. Unzip the file
 3. Run the jar using:
 
-   ```java -jar RunLengthEncoding-1.0-SNAPSHOT.jar yourTestString```
-
+   ```
+   java -jar RunLengthEncoding-1.0-SNAPSHOT.jar yourTestString
+   ```
    For example:
 
-```java -jar RunLengthEncoding-1.0-SNAPSHOT.jar wwwwaaadexxxxxx```
-
+   ```
+   java -jar RunLengthEncoding-1.0-SNAPSHOT.jar wwwwaaadexxxxxx
+   ```
+   
 ![img_3.png](img_3.png)
 
-**Create a new build and run the unit testing**
+## Create a new build, run the unit testing and run the solution
+
 1. Create a directory of your own choice. In this example we use *code*
 2. Navigate to your newly created directory:
 
-```cd code```
+   ```
+   cd code
+   ```
 3. Clone the repository
 
-```git clone git@github.com:scristialex/RunLengthEncoding.git```
+   ```
+   git clone git@github.com:scristialex/RunLengthEncoding.git
+   ```
 
 4. Change directory to *RunLengthEncoding* 
 
-```cd RunLengthEncoding```
-
+   ```
+   cd RunLengthEncoding
+   ```
 5. Create a new build and run the unit tests
 
-```mvn clean install```
+   ```
+   mvn clean install
+   ```
 
 6. If you need to only run the unit tests:
 
-```mvn test```
+   ```
+   mvn test
+   ```
 
-7. verify the test report:
+7. Verify the test report:
+   ```
+   cat target/surefire-reports/org.example.RunLengthEncodingTest.txt
+   ```
 
-```cat target/surefire-reports/org.example.RunLengthEncodingTest.txt```
+8. Run the solution:
 
+   ```
+   java -jar target/RunLengthEncoding-1.0-SNAPSHOT.jar wwwwaaadexxxxxx
+   ```
+
+## GitHub Actions
+I use a workflow that automatically builds, tests, and packages the application on every push to the main branch.
+The file can be accessed:
+   ```
+   cat .github/workflows/maven.yml
+   ```
+The created jar file can be downloaded from the *Actions* tab in the GitHub repository after a successful build. 
