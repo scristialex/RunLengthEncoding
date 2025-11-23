@@ -33,7 +33,7 @@ public class RunLengthEncoding {
             System.out.println(encode(args[0].toCharArray()));
         } else if (args.length == 0){
             System.out.println("Please provide an argument");
-        } else if (args.length > 1){
+        } else {
             System.out.println("Please provide only one argument");
         }
 
