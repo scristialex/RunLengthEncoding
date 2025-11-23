@@ -31,11 +31,10 @@ Complete the function **encode()** which takes a character array as a input para
 
 ## Prerequisites
 - For running the solution:
-  - Java: 24
-  - Maven: 3.9.11
+  - Java: version 8 or newer
   - Access to GitHub for downloading the jar package
 - For creating a new build and running the JUnit tests:
-    - Java: 24
+    - Java: version 8 or newer
     - Maven: 3.9.11
     - Access to GitHub or Git for cloning the repository
 
@@ -58,8 +57,9 @@ Complete the function **encode()** which takes a character array as a input para
    ```
    java -jar RunLengthEncoding-1.0-SNAPSHOT.jar wwwwaaadexxxxxx
    ```
+   The output for the above example should be:
    
-![img_3.png](img_3.png)
+   ![img_3.png](img_3.png)
 
 ## Create a new build, run the unit testing and run the solution
 
