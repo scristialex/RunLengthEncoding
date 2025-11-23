@@ -42,8 +42,7 @@ Complete the function **encode()** which takes a character array as a input para
 ## Running the solution
 1. Download the jar package
 
-    - Go to the [RunLengthEncoding](https://github.com/scristialex/RunLengthEncoding) repository
-    - Enter in the *Actions* tab
+    - Go to the *Actions* tab
     - Double click the most recent successful workflow
     ![img_1.png](img_1.png)
     - Download the *RunLengthEncoding-1.0-SNAPSHOT.jar* artifact
@@ -70,35 +69,43 @@ Complete the function **encode()** which takes a character array as a input para
    ```
    cd code
    ```
-3. Clone the repository
+3. Clone the repository:
+
+   - Using HTTPS:
+
+    ```
+   git clone https://github.com/scristialex/RunLengthEncoding.git
+   ```
+
+   - Or using SSH:
 
    ```
    git clone git@github.com:scristialex/RunLengthEncoding.git
    ```
 
-4. Change directory to *RunLengthEncoding* 
+5. Change directory to *RunLengthEncoding* 
 
    ```
    cd RunLengthEncoding
    ```
-5. Create a new build and run the unit tests
+6. Create a new build and run the unit tests
 
    ```
    mvn clean install
    ```
 
-6. If you need to only run the unit tests:
+7. If you need to only run the unit tests:
 
    ```
    mvn test
    ```
 
-7. Verify the test report:
+8. Verify the test report:
    ```
    cat target/surefire-reports/org.example.RunLengthEncodingTest.txt
    ```
 
-8. Run the solution:
+9. Run the solution:
 
    ```
    java -jar target/RunLengthEncoding-1.0-SNAPSHOT.jar wwwwaaadexxxxxx
