@@ -132,7 +132,8 @@ For example, if we run:
    ```java -jar target/RunLengthEncoding-1.0-SNAPSHOT.jar wwww#&AAA123da*```
 
 we'll obtain:
-    ![img_4.png](img_4.png)
+
+![img_4.png](img_4.png)
 
 The shell:
 - truncates the input string at '&'
