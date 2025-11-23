@@ -31,10 +31,10 @@ Complete the function **encode()** which takes a character array as a input para
 
 ## Prerequisites
 - For running the solution:
-  - Java: version 8 or newer
+  - Java: version 11 or newer
   - Access to GitHub for downloading the jar package
 - For creating a new build and running the JUnit tests:
-    - Java: version 8 or newer
+    - Java: version 11 or newer
     - Maven: 3.9.11
     - Access to GitHub or Git for cloning the repository
 
